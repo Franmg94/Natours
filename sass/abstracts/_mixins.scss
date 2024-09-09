@@ -1,0 +1,10 @@
+// A mixing always start writing @mixin
+
+@mixin clearfix { // Appends a pseudo element after the element which will clear the floats
+    &::after {
+        content:""; //If we don't specify content property, a pseudo element won't appear on the page, we wanted empty because we don't want to see this element
+        display: table; // Standard version
+        clear: both; // Property that clears both floats, left or right
+    }
+}
+
